@@ -4,8 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KOSIBAND</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .spinner-wrap {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fbf0e8;
+    }
+    
+    .spinner {
+      border: 10px solid #FEBE98;
+      border-radius: 50%;
+      border-top: 10px solid #f37021;
+      width: 100px;
+      height: 100px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root"><div class="spinner-wrap"><div class="spinner"></div></div></div>
 </body>
 </html>
